@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Author: Joshua Farr
+        Date: 11/7/2026
+        Purpose: Storefront page for Willow & Pine Crafts. It displays handmade
+                 craft products and a shopping cart. The cart is saved in
+                 localStorage, items added this session are counted in
+                 sessionStorage, and the last purchase is saved in a cookie.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Willow & Pine Crafts</title>
+    <link rel="stylesheet" href="PA_Storage-Central_StarterFile.css">
+    <script src="PA_Storage-Central_StarterFile.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Willow & Pine Crafts</h1>
+            <p id="cart-badge" class="cart-badge">Cart: <span id="cart-count">0</span></p>
+        </nav>
+    </header>
+
+    <main>
+        <section class="welcome-section">
+            <h2>Handmade With Care</h2>
+            <p id="welcome-message"></p>
+            <p id="session-message" class="session-message"></p>
+        </section>
+
+        <section class="product-grid" id="product-grid" aria-label="Products">
+            <!-- Product cards are added with JavaScript -->
+        </section>
+    </main>
+
+    <!-- Shopping cart -->
+    <aside class="cart-panel" aria-labelledby="cart-heading">
+        <h2 id="cart-heading">Your Cart</h2>
+        <p id="cart-summary">0 items</p>
+
+        <ul id="cart-items" class="cart-items"></ul>
+
+        <p id="cart-total" class="cart-total">Total: $0.00</p>
+
+        <button type="button" id="checkout-btn">Checkout</button>
+        <button type="button" id="clear-btn" class="secondary-btn">Clear Cart</button>
+    </aside>
+
+    <!-- Add to cart notification -->
+    <p id="notification" class="notification" role="status" aria-live="polite"></p>
+
+    <footer>
+        <p>Willow & Pine Crafts &copy; 2026</p>
+        <p>Developer: josfar6040</p>
+    </footer>
+</body>
+</html>
